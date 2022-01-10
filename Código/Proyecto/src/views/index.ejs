@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>PRODUCTOS</title>
+        <!--BOOTSTRAP 4 CDN-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark mb-4">
+            <a href="http://localhost:3000" class="navbar-brand">Productos</a>
+        </nav>
+        <div class = "container">
+            <div class = "row">
+                <!--LIST-->
+                <div class = "col-md-7">
+                    <table class = "table table-bordered table-hover table-dark">
+                        <thead>
+                            <tr class="table-primary">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i = 0; i <productos.length; i++) { %>
+                                <tr class="table-info">
+                                    <td><%= productos[i].id%></td>
+                                    <td><%= productos[i].name%></td>
+                                    <td>$<%= productos[i].price%></td>
+                                <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
