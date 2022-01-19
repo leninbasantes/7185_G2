@@ -1,0 +1,14 @@
+Seguridad del acceso al usuario (Registro y el Ingreso)
+listado de los productos (imageen caracteristicas y carrito de compras y la forma de pago)
+Contacto con la empresa
+Metodo de pago -> paypal, transferencia o tarjeta de credito 
+Categorias (se despliegan imagenes referenciales con los códigos de los productos)
+1. Filtro de aire 
+2. Filtro de aceite 
+3. Filtro de combustible 
+4. Filtro de aire acondicionado 
+
+Sugerencia -> Chatbot 
+https://www.xtraguardfilters.com/catalogos/aplicaciones
+
+La que mas gasta en desarrollo es la privada, la que mas gasta en investigacion es publica
