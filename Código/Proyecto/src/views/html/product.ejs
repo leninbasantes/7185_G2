@@ -92,7 +92,7 @@
           Multifiltros ofrece una gran cantidad de productos personalizables,
           PIDELOS YA!
         </h4>
-        <div class="row">
+        <div class="row" >
           <% for(var i = 0; i <rows.length; i++) { %>
           <div class="col-md-4 col-sm-6">
             <div class="single-about-detail">
@@ -106,6 +106,9 @@
                 <h3><%= rows[i].NAMEPRODUCT%></h3>
                 <p><%= rows[i].DESCRIPTIONPRODUCT%></p>
                 <p>Precio: <%= rows[i].PRICE%>$</p>
+                <% if (rows[i].OFERTA != null) {%>
+                <p><%= rows[i].OFERTA%></p>
+                <%}%>
               </div>
             </div>
           </div>

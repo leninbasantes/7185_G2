@@ -95,7 +95,7 @@
                   <th>DESCRIPCION PRODUCTO</th>
                   <th>PRECIO</th>
                   <th>CANTIDAD PRODUCTO</th>
-                  <th>CATEGORIA</th>
+                  <th>OFERTA</th>
                 </tr>
             </thead>
             <tbody>
@@ -107,7 +107,7 @@
                         <td><%= rows[i].DESCRIPTIONPRODUCT%></td>
                         <td><%= rows[i].PRICE%></td>
                         <td><%= rows[i].AMOUNTPRODUCT%></td>
-                        <td><%= rows[i].CATEGORY%></td>
+                        <td><%= rows[i].OFERTA%></td>
                         <td>
                           <a href="/api/products/edit/<%= rows[i].IDPRODUCT%>" class="btn btn-info">Editar</a>
                           <a href="/api/products/delete/<%= rows[i].IDPRODUCT%>" class="btn btn-danger">Eliminar</a>

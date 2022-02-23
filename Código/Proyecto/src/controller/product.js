@@ -61,8 +61,8 @@ router.post('/registerProduct', (req, res) => {
     const IMAGEPRODUCT = req.body.IMAGEPRODUCT;
     const PRICE = req.body.PRICE;
     const AMOUNTPRODUCT = req.body.AMOUNTPRODUCT;
-    const CATEGORY = req.body.CATEGORY;
-    mysqlConnection.query('INSERT INTO product (IDPRODUCT,NAMEPRODUCT,DESCRIPTIONPRODUCT,IMAGEPRODUCT,PRICE,AMOUNTPRODUCT,CATEGORY) VALUES (?,?,?,?,?,?,?)', [IDPRODUCT, NAMEPRODUCT, DESCRIPTIONPRODUCT, IMAGEPRODUCT, PRICE, AMOUNTPRODUCT, CATEGORY], (err, rows) => {
+    const CATEGORY = req.body.OFERTA;
+    mysqlConnection.query('INSERT INTO product (IDPRODUCT,NAMEPRODUCT,DESCRIPTIONPRODUCT,IMAGEPRODUCT,PRICE,AMOUNTPRODUCT,OFERTA) VALUES (?,?,?,?,?,?,?)', [IDPRODUCT, NAMEPRODUCT, DESCRIPTIONPRODUCT, IMAGEPRODUCT, PRICE, AMOUNTPRODUCT, CATEGORY], (err, rows) => {
         if (err) return res.send(err)
         res.redirect('/html/addProduct.html');
     })
@@ -109,14 +109,14 @@ router.post('/updatePro', (req, res) => {
     const DESCRIPTIONPRODUCT = req.body.DESCRIPTIONPRODUCT;
     const PRICE = req.body.PRICE;
     const AMOUNTPRODUCT = req.body.AMOUNTPRODUCT;
-    const CATEGORY = req.body.CATEGORY;
+    const CATEGORY = req.body.OFERTA;
     console.log(IDPRODUCT);
     console.log(NAMEPRODUCT);
     console.log(DESCRIPTIONPRODUCT);
     console.log(PRICE);
     console.log(AMOUNTPRODUCT);
     console.log(CATEGORY);
-    mysqlConnection.query('UPDATE product SET NAMEPRODUCT=?, DESCRIPTIONPRODUCT=?,PRICE=?,AMOUNTPRODUCT=?,CATEGORY=? WHERE IdProduct = ?', [NAMEPRODUCT, DESCRIPTIONPRODUCT, PRICE, AMOUNTPRODUCT, CATEGORY, IDPRODUCT], (err, rows, fields) => {
+    mysqlConnection.query('UPDATE product SET NAMEPRODUCT=?, DESCRIPTIONPRODUCT=?,PRICE=?,AMOUNTPRODUCT=?,OFERTA=? WHERE IdProduct = ?', [NAMEPRODUCT, DESCRIPTIONPRODUCT, PRICE, AMOUNTPRODUCT, CATEGORY, IDPRODUCT], (err, rows, fields) => {
         if (err) return res.send(err)
         res.redirect('/api/products/view');
     });
